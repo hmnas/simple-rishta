@@ -1,0 +1,299 @@
+:root {
+    --main: rgb(240, 240, 240);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.left {
+    flex: 1 34%;
+    background-color: var(--main);
+
+}
+
+.left-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.flex-data {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.gender i {
+    color: rgb(197, 12, 135);
+}
+
+.age {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.age .text {
+    flex-grow: 1;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 4px 0px;
+}
+
+.status,
+.rel,
+.edu,
+.cast,
+.country,
+.city,
+.sect,
+.age {
+    width: 85%;
+    margin: 20px auto;
+
+}
+
+.flex-data select {
+    padding: 15px;
+    width: 100%;
+    border-radius: 7px;
+    background: #dce2e2;
+    border: 1px solid grey;
+    appearance: none;
+}
+
+.flex-data input {
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+
+
+.right {
+    flex: 1 64%;
+    background-color: var(--main);
+    text-align: center;
+}
+
+.right-content {
+    padding: 15px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 48%;
+    background-color: white;
+    padding: 10px 15px;
+    /* margin: 0 10px; */
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px #dadada;
+}
+
+.card .profile {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.card .data {
+    margin: 20px 0 0;
+}
+
+.card .profile .img {
+    flex: 40%;
+    text-align: center;
+}
+
+.card .profile-data {
+    flex: 1 59%;
+}
+
+.card .profile-data h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-data h4,
+h3 {
+    margin: 12px;
+}
+
+.profile-data h3 {
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(197, 12, 135);
+}
+
+.profile-data h4:last-child {
+    background-color: rgb(197, 12, 135);
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 1px 1px 4px #6c6c6c;
+    font-size: 13px !important;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-bottom: 2px solid rgb(218, 218, 218);
+    margin: 15px auto;
+}
+
+.row-data {
+    flex: 49%;
+    margin: 5px;
+    font-size: 15px;
+    padding: 8px 0;
+}
+
+.row-data i {
+    margin: 0 15px 0 0;
+    color: rgb(197, 12, 135);
+}
+
+.right h1 {
+    border: 1px solid;
+    margin: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 6px 20px;
+    display: inline-block;
+}
+
+.right h1 span {
+    color: rgb(197, 12, 135);
+}
+
+
+@media (max-width: 950px) {
+    .main {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .flex-data {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .flex-data input {
+        width: 70%;
+    }
+
+    .status,
+    .rel,
+    .edu,
+    .cast,
+    .country,
+    .city,
+    .sect,
+    .age {
+        margin: 15px auto;
+    }
+
+    .gender {
+        justify-content: space-between;
+    }
+
+    .right {
+        padding-top: 25px;
+    }
+
+    .card {
+        padding: 0 25px;
+    }
+
+    .card .profile {
+        margin: 15px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        flex: 1 98%;
+    }
+
+    .card .profile {
+        margin: 15px 30px;
+        gap: 20px;
+    }
+
+    .card .profile .img {
+        flex: 25%;
+        text-align: center;
+    }
+
+    .card .profile-data {
+        flex: 74%;
+    }
+
+    .card .profile-data h4 {
+        font-size: 17px;
+    }
+
+    .profile-data h3 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .profile-data h4,
+    .profile-data h3 {
+        margin: 10px 0;
+    }
+
+    .right h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 481px) {
+    .flex-data input {
+        width: 60%;
+    }
+}
